@@ -1,1 +1,15 @@
+main:
+import configparser
+from digger.logger import log_init
+from digger.news.huobi.Gonggao import Gonggao
+from digger.news.huobi.Kuaixun import Kuaixun
+if __name__=="__main__":
+    # 初始化日志
+    log_init()
+    #加载配置i
+    # conf = configparser.ConfigParser()
+    # conf.read("setting.properties")
+    k = Gonggao()
+    k.run()
 
+log_init()    （logger.py) 是生成日志的
